@@ -1,0 +1,72 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .text-gradient-desert {
+    @apply bg-gradient-to-r from-desert-600 via-desert-400 to-desert-600 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-blockchain {
+    @apply bg-gradient-to-r from-blockchain-600 via-blockchain-400 to-blockchain-600 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-dhub {
+    @apply bg-gradient-to-r from-desert-600 via-blockchain-500 to-desert-600 bg-clip-text text-transparent;
+  }
+  
+  .dhub-shadow {
+    box-shadow: 0 10px 25px -5px rgba(251, 146, 60, 0.3), 0 4px 6px -2px rgba(14, 165, 233, 0.2);
+  }
+  
+  .desert-pattern {
+    background-image: radial-gradient(circle at 20% 80%, rgba(251, 211, 141, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 40% 40%, rgba(217, 119, 6, 0.1) 0%, transparent 50%);
+  }
+  
+  .dhub-gradient {
+    @apply bg-dhub-gradient;
+  }
+  
+  .blockchain-glow {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4), 0 0 40px rgba(14, 165, 233, 0.2);
+  }
+  
+  .desert-glow {
+    box-shadow: 0 0 20px rgba(251, 146, 60, 0.4), 0 0 40px rgba(251, 146, 60, 0.2);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-desert-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-desert-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-desert-500;
+}
