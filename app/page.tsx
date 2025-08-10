@@ -1,11 +1,11 @@
 
-import Header from '../components/header'
-import Hero from '../components/hero'
-import TokenInfo from '../components/token-info'
-import Tokenomics from '../components/tokenomics'
-import Community from '../components/community'
-import Footer from '../components/footer'
-import ContractSetupGuide from '../components/contract-setup-guide'
+import Header from '@/components/header'
+import Hero from '@/components/hero'
+import TokenInfo from '@/components/token-info'
+import Tokenomics from '@/components/tokenomics'
+import Community from '@/components/community'
+import Footer from '@/components/footer'
+import ContractSetupGuide from '@/components/contract-setup-guide'
 
 export default function Home() {
   return (
