@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/card'
-import { Badge } from '@/components/badge'
-import { Checkbox } from '@/components/checkbox'
-import { Button } from '@/components/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Button } from '@/components/ui/button'
 import { Pencil, Trash2 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
