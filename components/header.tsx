@@ -5,7 +5,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-export function Header() {
+export default function Header() {
   return (
     <motion.header 
       initial={{ y: -100, opacity: 0 }}
