@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion'
 import { useAccount } from 'wagmi'
 
-export function Hero() {
+export default function Hero() {
   const { isConnected } = useAccount()
 
   return (
