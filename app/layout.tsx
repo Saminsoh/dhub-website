@@ -1,14 +1,12 @@
-
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Providers } from '@/components/providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'DHUB - Diamond Hands Desert Lizard',
-  description: 'The ultimate meme coin for diamond hands! Join the desert lizard revolution with 7.77B DHUB tokens on Ethereum.',
+  description: 'The ultimate meme coin for diamond hands! Join the desert lizard revolution with 7.77B DHUB tokens.',
   keywords: 'DHUB, meme coin, cryptocurrency, desert lizard, diamond hands, Ethereum, DeFi',
   openGraph: {
     title: 'DHUB - Diamond Hands Desert Lizard',
@@ -32,9 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
-          {children}
-        </Providers>
+        {children}
       </body>
     </html>
   )
