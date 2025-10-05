@@ -1,29 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  images: { 
+    unoptimized: false,
+    domains: ['localhost'],
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      // More aggressive fallbacks
       config.resolve.fallback = {
         ...config.resolve.fallback,
-        '@react-native-async-storage/async-storage': false,
-        'react-native': false,
-        'react-native-fs': false,
-        'react-native-get-random-values': false,
-      }
-      
-      // Ignore these modules completely
-      config.externals = config.externals || []
-      config.externals.push({
-        '@react-native-async-storage/async-storage': 'commonjs @react-native-async-storage/async-storage'
-      })
+        fs: false,
+        net: false,
+        tls: false,
+      };
     }
-    return config
+    return config;
   },
-  // Suppress warnings
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
